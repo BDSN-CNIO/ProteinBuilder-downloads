@@ -28,18 +28,10 @@ shared folder when downloading isn't convenient.
 
    > "ProteinBuilder is damaged and should be moved to the Trash."
 
-   **It isn't damaged.** macOS says this about any app that hasn't been signed
-   with a paid Apple developer certificate. To get past it:
-
-   - Click **Cancel** (not "Move to Trash").
-   - Open **System Settings → Privacy & Security**, scroll down, and click
-     **Open Anyway**.
-   - Open the app again and confirm.
-
-   Or, in Terminal, once:
+   In the Terminal, once:
 
    ```bash
-   xattr -dr com.apple.quarantine /Applications/ProteinBuilder.app
+   xattr -dr com.apple.quarantine /path/to/ProteinBuilder.app
    ```
 
    (Copying the app from a USB stick instead of downloading it avoids this
